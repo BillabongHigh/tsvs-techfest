@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voice for Peace - Contact Us</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FFE5B4; /* Peach background */
+  color: black;
+  line-height: 1.6;
+  display: flex;
+}
+
+/* Left Navigation Menu */
+.nav-box {
+  background-color: black;
+  width: 180px;
+  height: 100vh;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 2px solid white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav-box a {
+  display: block;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+.nav-box a:hover {
+  background-color: #00BFFF;
+}
+.nav-title {
+  font-size: 1.5em;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+/* Content Area */
+.content {
+  margin-left: 200px; /* make room for nav */
+  padding: 20px;
+  flex: 1;
+}
+
+/* Form Box */
+.form-box {
+  background-color: black;
+  color: gold;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Form Elements */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid gold;
+  background: #111;
+  color: gold;
+}
+button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: gold;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background: #ffdd33;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: #FFD700;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 30px;
+  border-top: 2px solid white;
+}
+.footer p {
+  margin: 5px 0;
+}
+</style>
+</head>
+<body>
+
+<!-- Left Navigation -->
+<div class="nav-box">
+  <div class="nav-title">NAVIGATE</div>
+  <a href="home.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="impact.html">Impact</a>
+  <a href="contributions.html">Contributions</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="game.html">Game</a>
+</div>
+
+<!-- Content Area -->
+<div class="content">
+
+  <div class="form-box">
+    <h2>Contact Us</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Write your legal name">
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" placeholder="Write your valid Gmail or Yahoo address">
+
+    <label for="cc">Contact Number:</label>
+    <input type="text" id="cc" placeholder="CC 0000-0000-00">
+
+    <label for="subject">Subject:</label>
+    <select id="subject">
+      <option value="">Select</option>
+      <option value="Story">Story</option>
+      <option value="Slogan">Slogan</option>
+      <option value="Ideas">Ideas</option>
+      <option value="Appeals">Appeals</option>
+      <option value="Need help">Need help</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <textarea id="message" placeholder="Enter your message here" rows="6"></textarea>
+
+    <button onclick="validateForm()">Submit</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 Voice for Peace. All Rights Reserved.</p>
+    <p>Always for your service, at your service.</p>
+  </div>
+
+</div>
+
+<script>
+// English word list
+const englishWords = new Set([
+  "i","you","he","she","it","we","they","me","him","her","us","them",
+  "a","an","the","in","on","at","by","to","of","for","with",
+  "and","but","so","or","if","as","is","are","was","were","be",
+  "this","that","these","those","from","your","my","our","their",
+  "hey","hello","hi","how","what","when","where","why","which",
+  "do","does","did","have","has","had","can","could","will","would",
+  "may","might","must","shall","should","also","about","above","after",
+  "again","against","all","am","any","because","been","before","being",
+  "below","between","both","down","during","each","few","more","most",
+  "other","over","some","such","than","then","there","these","those",
+  "through","under","until","very","want","like","know","get","make",
+  "see","look","come","go","think","say","help","good","great","peace",
+  "voice","world","love","hope","unity","together","change","dream","freedom"
+]);
+
+// Auto-format and validate CC number
+const ccInput = document.getElementById('cc');
+ccInput.addEventListener('input', () => {
+  let value = ccInput.value.toUpperCase();
+
+  // Ensure it starts with CC
+  if (!value.startsWith('CC ')) {
+    value = 'CC ' + value.replace(/^CC\s*/i, '');
+  }
+
+  // Remove non-digit characters except - or space after CC
+  let afterCC = value.slice(3).replace(/[^\d]/g, '');
+
+  // Limit to 10 digits (4-4-2)
+  afterCC = afterCC.slice(0, 10);
+
+  // Auto-insert dashes after 4th and 8th digit
+  let formatted = '';
+  if (afterCC.length > 0) formatted += afterCC.slice(0, 4);
+  if (afterCC.length > 4) formatted += '-' + afterCC.slice(4, 8);
+  if (afterCC.length > 8) formatted += '-' + afterCC.slice(8, 10);
+
+  ccInput.value = 'CC ' + formatted;
+
+  // Validation pattern
+  const pattern = /^CC\s\d{4}[-\s]\d{4}[-\s]\d{2}$/;
+  if (pattern.test(ccInput.value)) {
+    ccInput.style.borderColor = 'green';
+  } else {
+    ccInput.style.borderColor = 'red';
+  }
+});
+
+function validateForm() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const cc = document.getElementById("cc").value.trim();
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value.trim();
+
+  // Name check
+  if (!name) { alert("Please enter your name."); return; }
+
+  // Email validation
+  if (email.includes(" ")) { alert("Email contains a space. Remove spaces."); return; }
+  if (!/^[\w._%+-]+@(gmail|yahoo|rediffmail|hotmail)\.com$/i.test(email)) { alert("Email is not complete or valid."); return; }
+
+  // CC validation
+  const ccPattern = /^CC\s\d{4}[-\s]\d{4}[-\s]\d{2}$/;
+  if (!ccPattern.test(cc)) {
+    alert("Credit card must be in the format CC 0000-0000-00 or CC 0000 0000 00");
+    return;
+  }
+
+  // Subject validation
+  if (!["Story","Slogan","Ideas","Appeals","Need help"].includes(subject)) {
+    alert("Please select a valid subject."); return;
+  }
+
+  // Message length check
+  if (message.length < 10) { alert("Message must be at least 10 characters."); return; }
+
+  // English word check
+  const words = message.toLowerCase().replace(/[^a-z\s]/g,'').split(/\s+/);
+  const recognized = words.filter(word => englishWords.has(word)).length;
+  const recognitionRate = recognized / words.length;
+
+  if (recognitionRate < 0.4) { 
+    alert("Message seems not to contain proper English words. Please use recognizable English words.");
+    return;
+  }
+
+  alert("Form submitted successfully!");
+}
+</script>
+
+</body>
+</html>

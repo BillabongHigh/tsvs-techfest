@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voice for Peace - About Us</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  line-height: 1.6;
+  background-color: peachpuff;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left nav box */
+.nav-box {
+  background-color: black;
+  padding: 20px;
+  width: 180px;
+  height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 2px solid white;
+}
+.nav-title {
+  font-size: 1.5em;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+.nav-box a {
+  display: block;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.nav-box a:hover {
+  background-color: #00BFFF;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Golden headline box */
+.headline-box {
+  background-color: black;
+  color: #FFD700;
+  padding: 10px 15px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+  max-width: 800px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="nav-box">
+  <div class="nav-title">NAVIGATE</div>
+  <a href="home.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="impact.html">Impact</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="game.html">Game</a> <!-- Game link at bottom -->
+</div>
+
+<!-- Content -->
+<div class="content">
+  <h1 class="headline-box">About Voice for Peace</h1>
+  <p>
+    Voice for Peace is an international organization committed to fostering understanding, compassion, 
+    and unity across borders. We believe that peace is not simply the absence of war, but the presence 
+    of justice, opportunity, and mutual respect among all people.
+  </p>
+  <p>
+    Founded by a coalition of humanitarian leaders, educators, and community advocates, we have grown 
+    into a global network of volunteers and supporters. Our work focuses on supporting refugees, 
+    advocating for human rights, and creating educational programs that teach conflict resolution and empathy.
+  </p>
+  <p>
+    Through strategic partnerships with NGOs, governments, and local communities, we are making 
+    measurable impacts on the ground. We operate with transparency, dedication, and a belief in 
+    the transformative power of peace.
+  </p>
+</div>
+
+</body>
+</html>

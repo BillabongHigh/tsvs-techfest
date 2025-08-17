@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voice for Peace - Contributions</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: peachpuff;
+  color: white;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Left Navigation Menu */
+.nav-box {
+  background-color: black;
+  width: 180px;
+  height: 100vh;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 2px solid white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav-box a {
+  display: block;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+.nav-box a:hover {
+  background-color: #00BFFF;
+}
+.nav-title {
+  font-size: 1.5em;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+/* Content Area */
+.content {
+  margin-left: 200px; /* make room for nav */
+  padding: 20px;
+  flex: 1;
+}
+
+/* Headline Box */
+.headline-box {
+  background-color: black;
+  color: #FFD700;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 30px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Black rounded info box */
+.info-box {
+  background-color: black;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.info-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease; /* smooth zoom */
+}
+.info-box img:hover {
+  transform: scale(1.2); /* zoom in on hover */
+  z-index: 1;
+}
+.info-box div.text-content {
+  flex: 1;
+}
+.info-box div.text-content h2 {
+  color: #FFD700;
+  margin-top: 0;
+}
+.info-box div.text-content p {
+  color: #D3D3D3;
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: justify;
+  margin: 5px 0 0 0;
+}
+
+/* Background Image Section */
+.background-section {
+  background-image: url('icon.jpg'); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.background-section h1 {
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: #FFD700;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  border-top: 2px solid white;
+}
+.footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+/* Former Refugees Section */
+.former-refugees {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  max-width: 900px;
+  gap: 20px;
+}
+.refugee-box {
+  background-color: black;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+.refugee-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease; /* smooth zoom */
+}
+.refugee-box img:hover {
+  transform: scale(1.2); /* zoom in on hover */
+  z-index: 1;
+}
+.refugee-box h2 {
+  color: #FFD700;
+  margin: 10px 0 5px 0;
+}
+.refugee-box p {
+  color: #D3D3D3;
+  font-size: 1em;
+  margin: 2px 0;
+}
+</style>
+</head>
+<body>
+
+<!-- Left Navigation -->
+<div class="nav-box">
+  <div class="nav-title">NAVIGATE</div>
+  <a href="home.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="impact.html">Impact</a>
+  <a href="contributions.html">Contributions</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="game.html">Game</a>
+</div>
+
+<!-- Content Area -->
+<div class="content">
+  <!-- Background Image Section -->
+  <div class="background-section">
+    <h1>Voice for Peace</h1>
+  </div>
+
+  <!-- Headline -->
+  <div class="headline-box">
+    Our Contributions
+  </div>
+
+  <!-- Contributions Info Boxes with Headings inside -->
+  <div class="info-box">
+    <img src="cont img 1.jpg" alt="Educating Children">
+    <div class="text-content">
+      <h2>Educating Children in Refugee Camps</h2>
+      <p>
+        We provide structured learning programs, access to educational materials, and trained volunteers to ensure every child continues 
+        to learn despite displacement in refugee camps around the world.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <img src="cont img 2.jpg" alt="Primary Healthcare">
+    <div class="text-content">
+      <h2>Primary Healthcare Initiatives</h2>
+      <p>
+        Mobile clinics and volunteer medical professionals deliver vaccinations, basic treatments, and health education to underserved 
+        populations in conflict zones.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <img src="cont img 3.jpg" alt="World Peace Education">
+    <div class="text-content">
+      <h2>Educating Refugees About World Peace</h2>
+      <p>
+        Through workshops, storytelling, and interactive sessions, participants learn conflict resolution skills, the importance of tolerance, 
+        and strategies for community building.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <img src="cont img 4.jpg" alt="Support Women and Children">
+    <div class="text-content">
+      <h2>Support for Women and Children</h2>
+      <p>
+        We run programs focused on mental health, nutrition, and safe spaces for women and children to recover and thrive even in challenging circumstances.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <img src="cont img 5.jpg" alt="Food Distribution">
+    <div class="text-content">
+      <h2>Distribution of Food and Supplies</h2>
+      <p>
+        Coordinating logistics with local NGOs, we provide timely food and essential supplies to families affected by war.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <img src="cont img 6.jpg" alt="Sustainable Projects">
+    <div class="text-content">
+      <h2>Promoting Sustainable Community Projects</h2>
+      <p>
+        We empower refugees and host communities with water access, small-scale farming, and local schooling initiatives to help rebuild their lives.
+      </p>
+    </div>
+  </div>
+
+  <!-- Countries Helped Section -->
+  <div class="headline-box">
+    Countries We Have Helped
+  </div>
+
+  <div class="info-box">
+    <img src="flag s.jpg" alt="Syria Flag">
+    <div class="text-content">
+      <h2>Syria. 2015. Syrian Civil War. 5 Refugee Camps Set Up</h2>
+      <p>Voice for Peace provided educational programs, food distribution, and primary healthcare to thousands of displaced families in refugee camps across Syria.</p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <img src="flag u.jpg" alt="Ukraine Flag">
+    <div class="text-content">
+      <h2>Ukraine. 2022. Ukraine War. 4 Refugee Camps Set Up</h2>
+      <p>Our teams delivered medical care, peace workshops, and educational support for children and women affected by the conflict.</p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <img src="flag cw.jpg" alt="Cold War Flag">
+    <div class="text-content">
+      <h2>Cold War. 1960s-1990s. 3 Refugee Camps Set Up</h2>
+      <p>We provided essential services including schooling, healthcare, and food distribution to displaced families during Cold War-era conflicts.</p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <img src="flag ss.jpg" alt="South Sudan Flag">
+    <div class="text-content">
+      <h2>South Sudan. 2019. South Sudanese Civil War. 4 Refugee Camps Set Up</h2>
+      <p>We supported children and families through education, healthcare services, and peace-building workshops in refugee camps.</p>
+    </div>
+  </div>
+
+  <!-- Former Refugees Section -->
+  <div class="headline-box">
+    Former Refugees
+  </div>
+  <div class="former-refugees">
+    <div class="refugee-box">
+      <img src="ref 1.jpg" alt="Refugee 1">
+      <h2>Ali Hassan</h2>
+      <p>War: Syrian Civil War</p>
+      <p>Current Post: Community Leader in Jordan</p>
+    </div>
+    <div class="refugee-box">
+      <img src="ref 2.jpg" alt="Refugee 2">
+      <h2>Maria Ivanova</h2>
+      <p>War: Ukraine War</p>
+      <p>Current Post: Teacher in Germany</p>
+    </div>
+    <div class="refugee-box">
+      <img src="ref 3.jpg" alt="Refugee 3">
+      <h2>John Okello</h2>
+      <p>War: South Sudanese Civil War</p>
+      <p>Current Post: NGO Coordinator in Kenya</p>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>&copy; 2025 Voice for Peace. All Rights Reserved.</p>
+    <p>Always for your service, at your service.</p>
+  </div>
+</div>
+
+</body>
+</html>

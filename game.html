@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voice for Peace - Game</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FFE5B4;
+  color: black;
+  line-height: 1.6;
+  display: flex;
+}
+
+/* Navigation Menu */
+.nav-box {
+  background-color: black;
+  width: 180px;
+  height: 100vh;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav-box a {
+  display: block;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: bold;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+.nav-box a:hover {
+  background-color: #00BFFF;
+}
+.nav-title {
+  font-size: 1.5em;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+/* Content Area */
+.content {
+  margin-left: 200px;
+  padding: 20px;
+  flex: 1;
+}
+
+/* Heading */
+.headline-box {
+  background-color: black;
+  color: #FFD700;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 30px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Question Boxes */
+.question-box {
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+.question-box h3 {
+  margin-bottom: 10px;
+}
+.question-box label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* Button */
+button {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 15px auto;
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #FFC200;
+}
+
+/* Answers Section */
+.answer-section {
+  background-color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  color: #FFD700;
+  display: none; /* Hidden initially */
+}
+.answer-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Score Section */
+.score-section {
+  background-color: black;
+  border-radius: 12px;
+  color: #FFD700;
+  text-align: center;
+  padding: 15px;
+  max-width: 900px;
+  margin: 20px auto;
+  display: none; /* Hidden initially */
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: #FFD700;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="nav-box">
+  <div class="nav-title">NAVIGATE</div>
+  <a href="home.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="impact.html">Impact</a>
+  <a href="contributions.html">Contributions</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="game.html">Game</a>
+</div>
+
+<div class="content">
+  <div class="headline-box">Test your knowledge about world peace</div>
+
+  <!-- Questions -->
+  <div class="question-box">
+    <h3>1. What is considered a fundamental principle for achieving world peace?</h3>
+    <label><input type="radio" name="q1" value="a"> Wealth accumulation</label>
+    <label><input type="radio" name="q1" value="b"> Justice and equality</label>
+    <label><input type="radio" name="q1" value="c"> Competition</label>
+    <label><input type="radio" name="q1" value="d"> Isolation</label>
+  </div>
+
+  <div class="question-box">
+    <h3>2. Which organization promotes global peace and security through diplomacy?</h3>
+    <label><input type="radio" name="q2" value="a"> United Nations</label>
+    <label><input type="radio" name="q2" value="b"> NATO</label>
+    <label><input type="radio" name="q2" value="c"> IMF</label>
+    <label><input type="radio" name="q2" value="d"> WTO</label>
+  </div>
+
+  <div class="question-box">
+    <h3>3. Non-violent conflict resolution is also known as?</h3>
+    <label><input type="radio" name="q3" value="a"> Mediation</label>
+    <label><input type="radio" name="q3" value="b"> Violence</label>
+    <label><input type="radio" name="q3" value="c"> Aggression</label>
+    <label><input type="radio" name="q3" value="d"> Isolation</label>
+  </div>
+
+  <div class="question-box">
+    <h3>4. What international day is celebrated on September 21 to promote peace?</h3>
+    <label><input type="radio" name="q4" value="a"> Earth Day</label>
+    <label><input type="radio" name="q4" value="b"> International Day of Peace</label>
+    <label><input type="radio" name="q4" value="c"> Human Rights Day</label>
+    <label><input type="radio" name="q4" value="d"> World Refugee Day</label>
+  </div>
+
+  <div class="question-box">
+    <h3>5. Which approach involves mutual understanding between conflicting parties?</h3>
+    <label><input type="radio" name="q5" value="a"> Dialogue and mediation</label>
+    <label><input type="radio" name="q5" value="b"> War</label>
+    <label><input type="radio" name="q5" value="c"> Competition</label>
+    <label><input type="radio" name="q5" value="d"> Isolation</label>
+  </div>
+
+  <div class="question-box">
+    <h3>6. Education for peace primarily teaches?</h3>
+    <label><input type="radio" name="q6" value="a"> Conflict resolution and empathy</label>
+    <label><input type="radio" name="q6" value="b"> Military strategies</label>
+    <label><input type="radio" name="q6" value="c"> Economic competition</label>
+    <label><input type="radio" name="q6" value="d"> Political lobbying</label>
+  </div>
+
+  <div class="question-box">
+    <h3>7. What is the role of humanitarian organizations in war-affected regions?</h3>
+    <label><input type="radio" name="q7" value="a"> Provide aid and support peacebuilding</label>
+    <label><input type="radio" name="q7" value="b"> Engage in combat</label>
+    <label><input type="radio" name="q7" value="c"> Exploit resources</label>
+    <label><input type="radio" name="q7" value="d"> Promote conflict</label>
+  </div>
+
+  <div class="question-box">
+    <h3>8. Promoting tolerance and dialogue helps prevent?</h3>
+    <label><input type="radio" name="q8" value="a"> Violence and war</label>
+    <label><input type="radio" name="q8" value="b"> Economic growth</label>
+    <label><input type="radio" name="q8" value="c"> Political campaigns</label>
+    <label><input type="radio" name="q8" value="d"> Scientific research</label>
+  </div>
+
+  <div class="question-box">
+    <h3>9. Collaboration between countries can reduce?</h3>
+    <label><input type="radio" name="q9" value="a"> International conflicts</label>
+    <label><input type="radio" name="q9" value="b"> Trade agreements</label>
+    <label><input type="radio" name="q9" value="c"> Cultural exchange</label>
+    <label><input type="radio" name="q9" value="d"> Sports competitions</label>
+  </div>
+
+  <div class="question-box">
+    <h3>10. Advocacy for human rights contributes to world peace by?</h3>
+    <label><input type="radio" name="q10" value="a"> Protecting human dignity and reducing oppression</label>
+    <label><input type="radio" name="q10" value="b"> Promoting wars</label>
+    <label><input type="radio" name="q10" value="c"> Increasing conflicts</label>
+    <label><input type="radio" name="q10" value="d"> Limiting education</label>
+  </div>
+
+  <button onclick="checkAnswers()">Submit Answers</button>
+
+  <div class="score-section" id="score"></div>
+
+  <div class="answer-section" id="answers">
+    <h2>Correct Answers</h2>
+    <p>1. Justice and equality</p>
+    <p>2. United Nations</p>
+    <p>3. Mediation</p>
+    <p>4. International Day of Peace</p>
+    <p>5. Dialogue and mediation</p>
+    <p>6. Conflict resolution and empathy</p>
+    <p>7. Provide aid and support peacebuilding</p>
+    <p>8. Violence and war</p>
+    <p>9. International conflicts</p>
+    <p>10. Protecting human dignity and reducing oppression</p>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Voice for Peace. All Rights Reserved.</p>
+    <p>Always for your service, at your service.</p>
+  </div>
+</div>
+
+<script>
+function checkAnswers() {
+  const correctAnswers = {
+    q1: "b", q2: "a", q3: "a", q4: "b", q5: "a",
+    q6: "a", q7: "a", q8: "a", q9: "a", q10: "a"
+  };
+
+  let score = 0;
+  for (let q in correctAnswers) {
+    const radios = document.getElementsByName(q);
+    for (let radio of radios) {
+      if (radio.checked && radio.value === correctAnswers[q]) {
+        score++;
+      }
+    }
+  }
+
+  const totalQuestions = Object.keys(correctAnswers).length;
+  const percentage = ((score / totalQuestions) * 100).toFixed(2);
+
+  // Show score
+  const scoreDiv = document.getElementById("score");
+  scoreDiv.innerHTML = `<h2>Your Score: ${score} / ${totalQuestions} (${percentage}%)</h2>`;
+  scoreDiv.style.display = "block";
+
+  // Show answers
+  document.getElementById("answers").style.display = "block";
+
+  // Scroll to score
+  scoreDiv.scrollIntoView({behavior: "smooth"});
+}
+</script>
+
+</body>
+</html>
